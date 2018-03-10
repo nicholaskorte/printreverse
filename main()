@@ -1,0 +1,23 @@
+/*When I run this code it says that the program has stopped working, so i am assuming I have an aendless loop somewhere but who knows.
+that is why I need help.*/
+
+#include <stdio.h>
+#include <string.h>
+
+void FirstReverse(const char str[]) {
+  int len = strlen(str) - 1;
+  int i;
+  for(i = len; i >= 0; i--){
+      printf("%s", str[i]);
+  }
+}
+
+int main(void) {
+
+  // disable stdout buffering
+  setvbuf(stdout, NULL, _IONBF, 0);
+
+  char str[5] = "nerd";
+  FirstReverse(str);
+  return 0;
+}
